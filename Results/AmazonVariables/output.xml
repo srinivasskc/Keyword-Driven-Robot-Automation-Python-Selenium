@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.1 (Python 3.8.2 on win32)" generated="20200603 11:36:56.550" rpa="false">
+<suite id="s1" name="Amazon" source="C:\development\robot-scripts\keyword-demo\Tests\Amazon.robot">
+<kw name="Insert Test Data" library="Common" type="setup">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Inserting Test Data</arg>
+</arguments>
+<msg timestamp="20200603 11:36:56.897" level="INFO">Inserting Test Data</msg>
+<status status="PASS" starttime="20200603 11:36:56.897" endtime="20200603 11:36:56.898"></status>
+</kw>
+<status status="PASS" starttime="20200603 11:36:56.897" endtime="20200603 11:36:56.898"></status>
+</kw>
+<test id="s1-t1" name="User must sign in to checkout">
+<kw name="Begin Web Test" library="Common" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20200603 11:36:56.900" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20200603 11:36:56.899" endtime="20200603 11:36:59.523"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200603 11:36:59.524" endtime="20200603 11:37:00.655"></status>
+</kw>
+<status status="PASS" starttime="20200603 11:36:56.899" endtime="20200603 11:37:00.656"></status>
+</kw>
+<kw name="User Search for the Products" library="Amazon">
+<kw name="Load Page" library="LandingPage">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${START_URL}</arg>
+</arguments>
+<msg timestamp="20200603 11:37:00.659" level="INFO">Opening url 'https://www.amazon.in'</msg>
+<status status="PASS" starttime="20200603 11:37:00.659" endtime="20200603 11:37:02.477"></status>
+</kw>
+<status status="PASS" starttime="20200603 11:37:00.658" endtime="20200603 11:37:02.477"></status>
+</kw>
+<kw name="Verify Page Loaded" library="LandingPage">
+<kw name="Get Location" library="SeleniumLibrary">
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" starttime="20200603 11:37:02.479" endtime="20200603 11:37:02.488"></status>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<arguments>
+<arg>https://www.amazon.in/</arg>
+</arguments>
+<msg timestamp="20200603 11:37:02.498" level="INFO">Current location is 'https://www.amazon.in/'.</msg>
+<status status="PASS" starttime="20200603 11:37:02.489" endtime="20200603 11:37:02.498"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Amazon.com, Inc. or its affiliates</arg>
+</arguments>
+<status status="PASS" starttime="20200603 11:37:02.498" endtime="20200603 11:37:02.540"></status>
+</kw>
+<status status="PASS" starttime="20200603 11:37:02.478" endtime="20200603 11:37:02.541"></status>
+</kw>
+<kw name="Search the Product" library="SearchProduct">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=twotabsearchtextbox</arg>
+<arg>${SEARCH_TERM}</arg>
+</arguments>
+<msg timestamp="20200603 11:37:02.542" level="INFO">Typing text 'Ferrari 458' into text field 'id=twotabsearchtextbox'.</msg>
+<status status="PASS" starttime="20200603 11:37:02.541" endtime="20200603 11:37:02.952"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//header//div[2]//div[1]//input[1]</arg>
+</arguments>
+<msg timestamp="20200603 11:37:02.952" level="INFO">Clicking button 'xpath=//header//div[2]//div[1]//input[1]'.</msg>
+<status status="PASS" starttime="20200603 11:37:02.952" endtime="20200603 11:37:04.848"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>results for "${SEARCH_TERM}"</arg>
+</arguments>
+<status status="PASS" starttime="20200603 11:37:04.848" endtime="20200603 11:37:04.908"></status>
+</kw>
+<status status="PASS" starttime="20200603 11:37:02.541" endtime="20200603 11:37:04.908"></status>
+</kw>
+<status status="PASS" starttime="20200603 11:37:00.657" endtime="20200603 11:37:04.908"></status>
+</kw>
+<kw name="User Selects Product from Search Results" library="Amazon">
+<kw name="Select the Product from List" library="SelectProduct">
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//div[3]//div[1]//span[1]//div[1]//div[1]//div[2]//h2[1]//a[1]</arg>
+</arguments>
+<msg timestamp="20200603 11:37:04.910" level="INFO">Clicking link 'xpath=//div[3]//div[1]//span[1]//div[1]//div[1]//div[2]//h2[1]//a[1]'.</msg>
+<status status="PASS" starttime="20200603 11:37:04.909" endtime="20200603 11:37:05.334"></status>
+</kw>
+<status status="PASS" starttime="20200603 11:37:04.909" endtime="20200603 11:37:05.335"></status>
+</kw>
+<status status="PASS" starttime="20200603 11:37:04.909" endtime="20200603 11:37:05.335"></status>
+</kw>
+<kw name="End Web Test" library="Common" type="teardown">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20200603 11:37:05.336" endtime="20200603 11:37:07.548"></status>
+</kw>
+<status status="PASS" starttime="20200603 11:37:05.336" endtime="20200603 11:37:07.549"></status>
+</kw>
+<doc>This is basic info about the Test</doc>
+<tags>
+<tag>Smoke</tag>
+</tags>
+<status status="PASS" starttime="20200603 11:36:56.898" endtime="20200603 11:37:07.549" critical="yes"></status>
+</test>
+<kw name="Cleanup Test Data" library="Common" type="teardown">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Cleaning up Test Data</arg>
+</arguments>
+<msg timestamp="20200603 11:37:07.554" level="INFO">Cleaning up Test Data</msg>
+<status status="PASS" starttime="20200603 11:37:07.554" endtime="20200603 11:37:07.554"></status>
+</kw>
+<status status="PASS" starttime="20200603 11:37:07.553" endtime="20200603 11:37:07.555"></status>
+</kw>
+<doc>This is basic info about whole suite</doc>
+<status status="PASS" starttime="20200603 11:36:56.555" endtime="20200603 11:37:07.555"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0">Smoke</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="Amazon">Amazon</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

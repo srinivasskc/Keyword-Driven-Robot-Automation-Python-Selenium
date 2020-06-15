@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.1 (Python 3.8.2 on win32)" generated="20200602 19:57:33.488" rpa="false">
+<suite id="s1" name="ListVariables" source="C:\development\robot-scripts\keyword-demo\Tests\ListVariables.robot">
+<test id="s1-t1" name="Listing the List Variables">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${MY_FRIENDS}[0]</arg>
+</arguments>
+<msg timestamp="20200602 19:57:33.525" level="INFO">Suresh</msg>
+<status status="PASS" starttime="20200602 19:57:33.525" endtime="20200602 19:57:33.525"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${MY_FRIENDS}[1]</arg>
+</arguments>
+<msg timestamp="20200602 19:57:33.526" level="INFO">Surya</msg>
+<status status="PASS" starttime="20200602 19:57:33.525" endtime="20200602 19:57:33.526"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${MY_FRIENDS}[2]</arg>
+</arguments>
+<msg timestamp="20200602 19:57:33.526" level="INFO">snigdha</msg>
+<status status="PASS" starttime="20200602 19:57:33.526" endtime="20200602 19:57:33.526"></status>
+</kw>
+<status status="PASS" starttime="20200602 19:57:33.524" endtime="20200602 19:57:33.527" critical="yes"></status>
+</test>
+<test id="s1-t2" name="Set Variables and Listing the List Variables">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>Deepa</arg>
+<arg>Dimple</arg>
+<arg>Dinesh</arg>
+</arguments>
+<assign>
+<var>@{my_new_friends}</var>
+</assign>
+<msg timestamp="20200602 19:57:33.529" level="INFO">@{my_new_friends} = [ Deepa | Dimple | Dinesh ]</msg>
+<status status="PASS" starttime="20200602 19:57:33.529" endtime="20200602 19:57:33.529"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${my_new_friends}[0]</arg>
+</arguments>
+<msg timestamp="20200602 19:57:33.532" level="INFO">Deepa</msg>
+<status status="PASS" starttime="20200602 19:57:33.532" endtime="20200602 19:57:33.532"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${my_new_friends}[1]</arg>
+</arguments>
+<msg timestamp="20200602 19:57:33.532" level="INFO">Dimple</msg>
+<status status="PASS" starttime="20200602 19:57:33.532" endtime="20200602 19:57:33.533"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${my_new_friends}[2]</arg>
+</arguments>
+<msg timestamp="20200602 19:57:33.533" level="INFO">Dinesh</msg>
+<status status="PASS" starttime="20200602 19:57:33.533" endtime="20200602 19:57:33.533"></status>
+</kw>
+<status status="PASS" starttime="20200602 19:57:33.528" endtime="20200602 19:57:33.534" critical="yes"></status>
+</test>
+<test id="s1-t3" name="Create Variable and Listing the List Variables">
+<kw name="Create List" library="BuiltIn">
+<doc>Returns a list containing given items.</doc>
+<arguments>
+<arg>Surya</arg>
+<arg>Suresh</arg>
+<arg>Krishna Teja</arg>
+</arguments>
+<assign>
+<var>@{my_special_friends}</var>
+</assign>
+<msg timestamp="20200602 19:57:33.536" level="INFO">@{my_special_friends} = [ Surya | Suresh | Krishna Teja ]</msg>
+<status status="PASS" starttime="20200602 19:57:33.535" endtime="20200602 19:57:33.536"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${my_special_friends}[0]</arg>
+</arguments>
+<msg timestamp="20200602 19:57:33.536" level="INFO">Surya</msg>
+<status status="PASS" starttime="20200602 19:57:33.536" endtime="20200602 19:57:33.536"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${my_special_friends}[1]</arg>
+</arguments>
+<msg timestamp="20200602 19:57:33.537" level="INFO">Suresh</msg>
+<status status="PASS" starttime="20200602 19:57:33.537" endtime="20200602 19:57:33.537"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${my_special_friends}[2]</arg>
+</arguments>
+<msg timestamp="20200602 19:57:33.538" level="INFO">Krishna Teja</msg>
+<status status="PASS" starttime="20200602 19:57:33.538" endtime="20200602 19:57:33.538"></status>
+</kw>
+<status status="PASS" starttime="20200602 19:57:33.535" endtime="20200602 19:57:33.538" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20200602 19:57:33.494" endtime="20200602 19:57:33.540"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0">Critical Tests</stat>
+<stat pass="3" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="0" id="s1" name="ListVariables">ListVariables</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

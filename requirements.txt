@@ -6,7 +6,7 @@ furl==2.1.0
 gherkin2robotframework==0.3
 gherkin3==3.1.2
 mss==5.1.0
-numpy==1.18.4
+numpy==1.22.0
 opencv-python==4.2.0.34
 orderedmultidict==1.0.1
 Pillow==7.1.2
